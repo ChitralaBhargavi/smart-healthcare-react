@@ -1,0 +1,128 @@
+/* =========================================================
+   Global styles — loaded AFTER Bootstrap (see main.jsx)
+   so these rules can override Bootstrap defaults.
+   ========================================================= */
+
+:root {
+  --sc-primary: #2F6FED;
+  --sc-primary-light: #E8F0FE;
+  --sc-text: #1F2A44;
+  --sc-muted: #6B7A99;
+  --sc-bg-soft: #F7F9FC;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--sc-text);
+  margin: 0;
+}
+
+/* ---------- Navbar ---------- */
+.brand-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--sc-primary);
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.nav-link.active-link {
+  color: var(--sc-primary) !important;
+  font-weight: 600;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(180deg, var(--sc-primary-light) 0%, #ffffff 100%);
+  padding: 4rem 0 3rem;
+}
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+.hero-image {
+  max-width: 340px;
+  box-shadow: 0 20px 40px rgba(47, 111, 237, 0.25);
+}
+
+/* ---------- Cards (service / tip / doctor) ---------- */
+.service-card,
+.tip-card {
+  background: #fff;
+  border: 1px solid #ECEFF5;
+  border-radius: 14px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.service-card:hover,
+.tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(31, 42, 68, 0.08);
+}
+.service-icon {
+  font-size: 1.8rem;
+}
+
+.doctor-card {
+  border: 1px solid #ECEFF5;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(31, 42, 68, 0.08);
+}
+.doctor-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.doctor-card img {
+  height: 160px;
+  object-fit: cover;
+}
+
+/* ---------- Doctor grid: CSS Grid demo (Bootstrap handles most layout,
+   but this shows the raw CSS Grid concept from the syllabus) ---------- */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--sc-bg-soft);
+  color: var(--sc-muted);
+  border-top: 1px solid #ECEFF5;
+}
+
+/* ---------- Quiz ---------- */
+.quiz-card {
+  background: #14213D;
+  color: #fff;
+  border-radius: 16px;
+}
+.quiz-option {
+  cursor: pointer;
+  border: 1px solid #2c3a5e;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.15s ease;
+}
+.quiz-option:hover {
+  background: rgba(255,255,255,0.08);
+}
+.quiz-option.selected {
+  background: var(--sc-primary);
+  border-color: var(--sc-primary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 576px) {
+  .hero {
+    padding: 2.5rem 0 2rem;
+    text-align: center;
+  }
+}
