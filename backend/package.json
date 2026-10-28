@@ -1,0 +1,29 @@
+{
+  "name": "smartcare-backend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "check": "node --check src/server.js && node --check src/app.js",
+    "test": "node --test test/businessRules.test.js",
+    "test:integration": "node --test test/integration.test.js",
+    "seed:doctors": "node src/scripts/seedDoctors.js",
+    "create:doctor": "node src/scripts/createDoctorUser.js",
+    "set:doctor-password": "node src/scripts/setDoctorPassword.js",
+    "link:doctor": "node src/scripts/linkDoctorUser.js",
+    "provision:doctors": "node src/scripts/provisionDoctorAccounts.js",
+    "migrate:priya": "node src/scripts/migratePriyaDoctorAccount.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "nodemailer": "^7.0.6"
+  }
+}
